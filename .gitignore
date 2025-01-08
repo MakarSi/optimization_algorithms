@@ -1,6 +1,8 @@
 # vscode
 .vscode/
 
+# generateed html
+*.html
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
