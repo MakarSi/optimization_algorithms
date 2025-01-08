@@ -1,6 +1,6 @@
 pytest==8.3.2
 pytest-cov==5.0.0
 black==24.10.0
-numpy==2.2.1
+numpy==1.26.4
 plotly==5.24.1
 nptyping==2.5.0
