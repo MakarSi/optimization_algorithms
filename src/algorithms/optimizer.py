@@ -1,5 +1,6 @@
 from abc import abstractmethod
 from typing import Callable, List, Optional, Tuple
+from nptyping import NDArray
 import numpy as np
 
 from .helpers import central_gradient
@@ -14,7 +15,7 @@ class Optimizer:
         derivative: Optional[
             Callable[[Tuple[float, ...]], Tuple[float, ...]]
         ] = None,
-        start_point: np.NDArray = None,
+        start_point: NDArray = None,
     ):
         self._objective = objective
         self._derivative = (
@@ -44,7 +45,7 @@ class Optimizer:
         return self._objective(*self._current_point)
 
     @property
-    def current_point(self) -> np.NDArray:
+    def current_point(self) -> NDArray:
         return self._current_point
 
     @abstractmethod

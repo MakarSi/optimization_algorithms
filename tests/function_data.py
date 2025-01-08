@@ -1,6 +1,7 @@
 from dataclasses import dataclass
 from typing import Callable, List, Optional, Tuple
 
+from nptyping import NDArray
 import numpy as np
 
 
@@ -8,7 +9,7 @@ import numpy as np
 class TestFunction:
     function: Callable
     bounds: List[Tuple[float, float]]
-    start_point: Optional[np.NDArray] = None
+    start_point: Optional[NDArray] = None
     alpha: float = 0.01
     name: str = ""
 

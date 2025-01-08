@@ -1,9 +1,10 @@
 from typing import Callable, Tuple
+from nptyping import NDArray
 import numpy as np
 
 
 def central_gradient(
-    f: Callable[[Tuple[float, ...]], float], arr: np.NDArray, h: float = 1e-8
+    f: Callable[[Tuple[float, ...]], float], arr: NDArray, h: float = 1e-8
 ):
     """
     Вычисляет численную производную функции f в точке x.
